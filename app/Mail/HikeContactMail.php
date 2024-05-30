@@ -27,7 +27,7 @@ class HikeContactMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            to: 'admin@doe.com',
+            to: 'admin@hike.com',
             replyTo: $this->data['email'],
             subject: 'Hike Contact Mail',
         );
