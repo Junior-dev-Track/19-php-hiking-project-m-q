@@ -2,10 +2,15 @@
 
 @section('content')
 
+    <div class="d-flex align-items-center" style="background-image: url('/img/backgroundhome.jpg'); background-repeat: no-repeat; background-size: cover; height: 200px;">
+      <div class="container">
+        <h1 class="text-center text-secondary">Bienvenue sur HikingSpirit</h1>
+        <p class="text-center text-secondary">Découvrez les plus beaux sentiers de randonnée avec HikingSpirit, votre guide ultime pour explorer la nature. Que vous soyez un randonneur débutant ou un aventurier chevronné, notre site vous offre des ressources complètes pour planifier vos escapades en plein air.</p>
+      </div>
+    </div>
+
 <div class="bg-light p-5 mb-5 text-center">
   <div class="container">
-    <h1>Bienvenue sur HikingSpirit</h1>
-    <p>Découvrez les plus beaux sentiers de randonnée avec HikingSpirit, votre guide ultime pour explorer la nature. Que vous soyez un randonneur débutant ou un aventurier chevronné, notre site vous offre des ressources complètes pour planifier vos escapades en plein air.</p>
     <h3>Explorez des sentiers diversifiés</h3>
     <p>Plongez dans notre vaste collection de randonnées couvrant divers paysages, des montagnes majestueuses aux forêts verdoyantes, en passant par des sentiers côtiers époustouflants. Chaque parcours est minutieusement détaillé avec des cartes interactives, des niveaux de difficulté, et des conseils pratiques pour une expérience inoubliable.</p>
     <h3>Guides de randonnée</h3>
