@@ -6,7 +6,7 @@
 <div class="container mt-4">
   <h1>{{ $hike->title }}</h1>
   <h2>{{ $hike->duration }} min - {{ $hike->distance }} km</h2>
-  <img src="/img/hikes/{{ $hike->title }}.jpg" class="img-fluid rounded mx-auto d-block" alt="{{ $hike->title }}">
+  <img src="/img/hikes/{{ $hike->title }}.jpg" style="max-width: 500px;"" class="img-fluid rounded mx-auto d-block" alt="{{ $hike->title }}">
 
   <hr>
 
@@ -52,7 +52,7 @@
 
     @include('shared.flash')
 
-    <form action="{{ route('hike.contact', $hike) }}" method="post" class="vstack gap-3">
+    <form action="{{ route('hike.contact', $hike) }}" method="post" class="vstack gap-3" style="padding-bottom: 80px;">
       @csrf
       <div class="row">
         @include('shared.input', ['class' =>'col', 'name' => 'firstname', 'label' => 'Prenom'])
@@ -67,6 +67,7 @@
         <button class="btn btn-primary">Soumettre</button>
       </div>
     </form>
+
   </div>
 
   </div>

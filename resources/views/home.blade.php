@@ -22,7 +22,7 @@
   </div>
 </div>
 
-<div class="container pb-5">
+<div class="container" style="padding-bottom: 80px;">
   <h2>Nos dernières randos</h2>
   <div class="row">
     @foreach($hikes as $hike)
