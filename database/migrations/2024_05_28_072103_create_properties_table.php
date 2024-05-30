@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->longText('description');
-            $table->integer('distance');
-            $table->integer('duration');
+            $table->string('distance');
+            $table->string('duration');
             $table->integer('elevation_gain');
             $table->string('city');
             $table->string('country');

@@ -22,10 +22,10 @@ class HikeFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'min:8'],
+            'title' => ['required', 'min:5'],
             'description' => ['required', 'min:8'],
-            'distance' => ['required', 'integer', 'min:10'],
-            'duration' => ['required', 'integer', 'min:1'],
+            'distance' => ['required', 'min:1'],
+            'duration' => ['required', 'min:1'],
             'elevation_gain' => ['required', 'integer', 'min:0'],
             'city' => ['required', 'min:3'],
             'country' => ['required', 'min:3'],

@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('option_hike', function (Blueprint $table) {
+        Schema::create('hike_option', function (Blueprint $table) {
             $table->foreignIdFor(\App\Models\Option::class)->constrained()->cascadeOnDelete();
             $table->foreignIdFor(\App\Models\Hike::class)->constrained()->cascadeOnDelete();
             $table->primary(['option_id', 'hike_id']);
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('option_caca');
+        Schema::dropIfExists('hike_option');
     }
 };
