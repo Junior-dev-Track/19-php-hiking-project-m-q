@@ -6,7 +6,7 @@
 
 <div class="d-flex justify-content-between align-items-center">
   <h1>@yield('title')</h1>
-  <a href="{{ route('admin.property.create') }}" class="btn btn-primary">Ajouter une rando</a>
+  <a href="{{ route('admin.hike.create') }}" class="btn btn-primary">Ajouter une rando</a>
 </div>
   
   <table class="table table-striped">
@@ -19,15 +19,15 @@
       </tr>
     </thead>
     <tbody>
-      @foreach ($properties as $property)
+      @foreach ($hikes as $hike)
           <tr>
-            <td>{{ $property->title }}</td>
-            <td>{{ $property->distance }} km</td>
-            <td>{{ $property->city }}</td>
+            <td>{{ $hike->title }}</td>
+            <td>{{ $hike->distance }} km</td>
+            <td>{{ $hike->city }}</td>
             <td>
               <div class="d-flex gap-2 w-100 justify-content-end">
-                <a href="{{ route('admin.property.edit', $property) }}" class="btn btn-primary">Modifier</a>
-                <form action="{{ route('admin.property.destroy', $property) }}" method="post">
+                <a href="{{ route('admin.hike.edit', $hike) }}" class="btn btn-primary">Modifier</a>
+                <form action="{{ route('admin.hike.destroy', $hike) }}" method="post">
                   @csrf
                   @method('delete')
                   <button type="submit" class="btn btn-danger">Supprimer</button>
@@ -40,6 +40,6 @@
         
   </table>
 
-  {{ $properties->links() }}
+  {{ $hikes->links() }}
 
 @endsection

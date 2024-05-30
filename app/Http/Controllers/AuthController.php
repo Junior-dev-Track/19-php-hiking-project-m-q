@@ -27,7 +27,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended(route('admin.property.index'));
+            return redirect()->intended(route('admin.hike.index'));
         }
 
         return back()->withErrors([

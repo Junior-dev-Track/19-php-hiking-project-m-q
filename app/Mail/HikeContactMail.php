@@ -2,7 +2,7 @@
 
 namespace App\Mail;
 
-use App\Models\Property;
+use App\Models\Hike;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -10,14 +10,14 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class PropertyContactMail extends Mailable
+class HikeContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(public Property $property, public array $data)
+    public function __construct(public Hike $hike, public array $data)
     {
     }
 
@@ -29,7 +29,7 @@ class PropertyContactMail extends Mailable
         return new Envelope(
             to: 'admin@doe.com',
             replyTo: $this->data['email'],
-            subject: 'Property Contact Mail',
+            subject: 'Hike Contact Mail',
         );
     }
 
@@ -39,7 +39,7 @@ class PropertyContactMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.property.contact',
+            markdown: 'emails.hike.contact',
         );
     }
 

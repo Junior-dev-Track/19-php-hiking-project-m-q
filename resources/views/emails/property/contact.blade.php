@@ -1,7 +1,7 @@
 <x-mail::message>
 # Nouvelle demande de contact
 
-Une nouvelle demande de contact a été reçue pour la propriété <a href="{{ route('property.show', ['slug' => $property->getSlug(), 'property' => $property]) }}">{{ $property->title }}</a>.
+Une nouvelle demande de contact a été reçue pour la propriété <a href="{{ route('hike.show', ['slug' => $hike->getSlug(), 'hike' => $hike]) }}">{{ $hike->title }}</a>.
 
 - Prenom: {{ $data['firstname'] }}
 - Nom: {{ $data['lastname'] }}

@@ -1,36 +1,36 @@
 @extends('base')
 
-@section('title', $property->title)
+@section('title', $hike->title)
 
 @section('content')
 <div class="container mt-4">
-  <h1>{{ $property->title }}</h1>
-  <h2>{{ $property->duration }} min - {{ $property->distance }} km</h2>
+  <h1>{{ $hike->title }}</h1>
+  <h2>{{ $hike->duration }} min - {{ $hike->distance }} km</h2>
 
   <hr>
 
   <div class="mt-4">
-    <p>{!! nl2br($property->description) !!}</p>
+    <p>{!! nl2br($hike->description) !!}</p>
     <div class="row">
       <div class="col-8">
         <h2>Caractéristiques</h2>
         <table class="table table-striped">
           <tr>
             <td>Distance</td>
-            <td>{{ $property->distance }} km</td>
+            <td>{{ $hike->distance }} km</td>
           </tr>
           <tr>
             <td>Durée</td>
-            <td>{{ $property->duration }} min</td>
+            <td>{{ $hike->duration }} min</td>
           </tr>
           <tr>
             <td>Dénivelé</td>
-            <td>{{ $property->elevation_gain }} m</td>
+            <td>{{ $hike->elevation_gain }} m</td>
           </tr>
           <tr>
             <td>Localisation</td>
             <td>
-              {{ $property->city }} ({{ $property->country }})
+              {{ $hike->city }} ({{ $hike->country }})
             </td>
           </tr>
         </table>
@@ -38,7 +38,7 @@
       <div class="col-4">
         <h2>Specificités</h2>
         <ul class="list-group">
-          @foreach($property->options as $option)
+          @foreach($hike->options as $option)
             <li class="list-group-item">{{ $option->name }}</li>
           @endforeach
         </ul>
@@ -51,7 +51,7 @@
 
     @include('shared.flash')
 
-    <form action="{{ route('property.contact', $property) }}" method="post" class="vstack gap-3">
+    <form action="{{ route('hike.contact', $hike) }}" method="post" class="vstack gap-3">
       @csrf
       <div class="row">
         @include('shared.input', ['class' =>'col', 'name' => 'firstname', 'label' => 'Prenom'])

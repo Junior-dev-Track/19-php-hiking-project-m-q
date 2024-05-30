@@ -16,9 +16,9 @@
 
   <div class="container">
     <div class="row">
-    @forelse($properties as $property)
+    @forelse($hikes as $hike)
       <div class="col-3 mb-4">
-        @include('property.card')
+        @include('hike.card')
       </div>
       @empty
       <div class="col">
@@ -27,7 +27,7 @@
     @endforelse
     </div>
     <div class="my-4">
-      {{ $properties->links() }}
+      {{ $hikes->links() }}
     </div>
   </div>
 
