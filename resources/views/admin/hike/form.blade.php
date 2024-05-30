@@ -1,6 +1,6 @@
 @extends('admin.admin')
 
-@section('title', $hike->exists ? 'Editer une rando' : 'Creer une rando')
+@section('title', $hike->exists ? 'Modifier une rando' : 'Creer une rando')
 
 @section('content')
 
@@ -31,9 +31,9 @@
 <div>
   <button class="btn btn-success">
       @if($hike->exists)
-        Editer
+        Modifier
       @else
-        Creer
+        Créer
       @endif
   </button>
 </div>
