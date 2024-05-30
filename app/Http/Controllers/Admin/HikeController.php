@@ -25,7 +25,7 @@ class HikeController extends Controller
         $hike = new Hike();
         $hike->fill([
             'distance' => 10,
-            'duration' => 30,
+            'duration' => '1 h30',
             'elevation_gain' => 300,
             'city' => 'Battice',
         ]);
