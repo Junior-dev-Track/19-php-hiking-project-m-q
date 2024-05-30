@@ -64,5 +64,13 @@
     new TomSelect('select[multiple]', {plugins: {remove_button: {title: 'Supprimer'}}});
   </script>
 
+<nav class="navbar bg-primary fixed-bottom">
+  <div class="container-fluid">
+    <span class="navbar-text mx-auto" style="color: #e3f2fd;">
+      © Copyright 2024 | HikingSpirit
+    </span>
+  </div>
+</nav>
+
 </body>
 </html>
