@@ -1,6 +1,6 @@
 @extends('admin.admin')
 
-@section('title', $option->exists ? 'Editer une option' : 'Creer une option')
+@section('title', $option->exists ? 'Modifier une option' : 'Creer une option')
 
 @section('content')
 
@@ -16,9 +16,9 @@
 <div>
   <button class="btn btn-success">
       @if($option->exists)
-        Editer
+        Modifier
       @else
-        Creer
+        Créer
       @endif
   </button>
 </div>
