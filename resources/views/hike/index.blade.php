@@ -10,7 +10,7 @@
     <input type="number" placeholder="Distance min" class="form-control" name="distance" value="{{ $input['distance'] ?? '' }}">
     <input type="number" placeholder="Durée de la rando" class="form-control" name="duration" value="{{ $input['duration'] ?? '' }}">
     <input placeholder="Mot clef" class="form-control" name="title" value="{{ $input['title'] ?? '' }}">
-    <button class="btn btn-primary btn-sm flex-grow-0">Rechercher</button>
+    <button class="btn btn-success btn-sm flex-grow-0">Rechercher</button>
   </form>
 </div>
 

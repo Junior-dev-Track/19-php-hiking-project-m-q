@@ -14,7 +14,7 @@
 @include('shared.input', ['name' => 'name', 'label' => 'Nom', 'value' => $option->name])
 
 <div>
-  <button class="btn btn-primary">
+  <button class="btn btn-success">
       @if($option->exists)
         Editer
       @else

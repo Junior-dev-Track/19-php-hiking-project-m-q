@@ -18,7 +18,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+  <nav class="navbar navbar-expand-lg bg-success bg-gradient navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">HikingSpirit</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +64,7 @@
     new TomSelect('select[multiple]', {plugins: {remove_button: {title: 'Supprimer'}}});
   </script>
 
-<nav class="navbar bg-primary fixed-bottom">
+<nav class="navbar bg-success bg-gradient fixed-bottom">
   <div class="container-fluid">
     <span class="navbar-text mx-auto" style="color: #e3f2fd;">
       © Copyright 2024 | HikingSpirit

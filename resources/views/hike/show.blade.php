@@ -64,7 +64,7 @@
       </div>
       @include('shared.input', ['type' => 'textarea', 'class' =>'col', 'name' => 'message', 'label' => 'Message'])
       <div>
-        <button class="btn btn-primary">Soumettre</button>
+        <button class="btn btn-success">Soumettre</button>
       </div>
     </form>
 

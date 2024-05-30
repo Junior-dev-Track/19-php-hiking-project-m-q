@@ -14,7 +14,7 @@
   @include('shared.input', ['type' => 'email', 'class' => 'col', 'name' => 'email', 'label' => 'Email'])
   @include('shared.input', ['type' => 'password', 'class' => 'col', 'name' => 'password', 'label' => 'Mot de passe'])
   <div>
-    <button class="btn btn-primary">Se connecter</button>
+    <button class="btn btn-success">Se connecter</button>
   </div>
 </form>
 </div>

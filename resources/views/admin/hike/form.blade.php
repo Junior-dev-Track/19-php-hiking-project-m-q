@@ -29,7 +29,7 @@
 @include('shared.select', ['name' => 'options', 'label' => 'Options', 'value' => $hike->options()->pluck('id'),'multiple' => true])
 
 <div>
-  <button class="btn btn-primary">
+  <button class="btn btn-success">
       @if($hike->exists)
         Editer
       @else

@@ -6,7 +6,7 @@
 
 <div class="d-flex justify-content-between align-items-center">
   <h1>@yield('title')</h1>
-  <a href="{{ route('admin.hike.create') }}" class="btn btn-primary">Ajouter une rando</a>
+  <a href="{{ route('admin.hike.create') }}" class="btn btn-success">Ajouter une rando</a>
 </div>
   
   <table class="table table-striped">
@@ -26,7 +26,7 @@
             <td>{{ $hike->city }}</td>
             <td>
               <div class="d-flex gap-2 w-100 justify-content-end">
-                <a href="{{ route('admin.hike.edit', $hike) }}" class="btn btn-primary">Modifier</a>
+                <a href="{{ route('admin.hike.edit', $hike) }}" class="btn btn-success">Modifier</a>
                 <form action="{{ route('admin.hike.destroy', $hike) }}" method="post">
                   @csrf
                   @method('delete')
