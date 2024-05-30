@@ -15,15 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->longText('description');
-            $table->integer('surface');
-            $table->integer('rooms');
-            $table->integer('bedrooms');
-            $table->integer('floor');
-            $table->integer('price');
+            $table->integer('distance');
+            $table->integer('duration');
+            $table->integer('elevation_gain');
             $table->string('city');
-            $table->string('address');
-            $table->string('postal_code');
-            $table->boolean('sold');
+            $table->string('country');
             $table->timestamps();
         });
     }

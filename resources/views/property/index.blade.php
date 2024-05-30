@@ -1,15 +1,14 @@
 @extends('base')
 
 
-@section('title', 'Tous les biens')
+@section('title', 'Toutes les randos')
 
 @section('content')
 
 <div class="bg-light p-5 mb-5 text-center">
   <form action="" method="get" class="container d-flex gap-2">
-    <input type="number" placeholder="Surface min" class="form-control" name="surface" value="{{ $input['surface'] ?? '' }}">
-    <input type="number" placeholder="Nombre de pieces min" class="form-control" name="rooms" value="{{ $input['rooms'] ?? '' }}">
-    <input type="number" placeholder="Budget max" class="form-control" name="price" value="{{ $input['price'] ?? '' }}">
+    <input type="number" placeholder="Distance min" class="form-control" name="distance" value="{{ $input['distance'] ?? '' }}">
+    <input type="number" placeholder="Durée de la rando" class="form-control" name="duration" value="{{ $input['duration'] ?? '' }}">
     <input placeholder="Mot clef" class="form-control" name="title" value="{{ $input['title'] ?? '' }}">
     <button class="btn btn-primary btn-sm flex-grow-0">Rechercher</button>
   </form>
@@ -23,7 +22,7 @@
       </div>
       @empty
       <div class="col">
-        Aucun bien ne correspond a la recherche
+        Aucune rando ne correspond à la recherche
       </div>
     @endforelse
     </div>

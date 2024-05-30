@@ -17,12 +17,12 @@ use Illuminate\Support\Facades\Route;
 $idRegex = '[0-9]+';
 $slugRegex = '[a-z0-9\-]+';
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/biens', [\App\Http\Controllers\PropertyController::class, 'index'])->name('property.index');
-Route::get('/biens/{slug}-{property}', [\App\Http\Controllers\PropertyController::class, 'show'])->name('property.show')->where([
+Route::get('/randos', [\App\Http\Controllers\PropertyController::class, 'index'])->name('property.index');
+Route::get('/randos/{slug}-{property}', [\App\Http\Controllers\PropertyController::class, 'show'])->name('property.show')->where([
     'property' => $idRegex,
     'slug' => $slugRegex
 ]);
-Route::post('/biens/{property}/contact', [\App\Http\Controllers\PropertyController::class, 'contact'])->name('property.contact')->where([
+Route::post('/randos/{property}/contact', [\App\Http\Controllers\PropertyController::class, 'contact'])->name('property.contact')->where([
     'property' => $idRegex
 ]);
 

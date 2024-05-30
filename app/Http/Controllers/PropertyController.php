@@ -14,14 +14,11 @@ class PropertyController extends Controller
     public function index(SearchPropertiesRequest $request)
     {
         $query = Property::query()->orderBy('created_at', 'desc')->with('options');
-        if ($price = $request->validated('price')) {
-            $query = $query->where('price', '<=', $price);
+        if ($distance = $request->validated('distance')) {
+            $query = $query->where('distance', '>=', $distance);
         }
-        if ($surface = $request->validated('surface')) {
-            $query = $query->where('surface', '>=', $surface);
-        }
-        if ($rooms = $request->validated('rooms')) {
-            $query = $query->where('rooms', '>=', $rooms);
+        if ($duration = $request->validated('duration')) {
+            $query = $query->where('duration', '>=', $duration);
         }
         if ($title = $request->validated('title')) {
             $query = $query->where('title', 'like', "%{$title}%");
@@ -47,6 +44,6 @@ class PropertyController extends Controller
     public function contact(PropertyContactRequest $request, Property $property)
     {
         Mail::send(new PropertyContactMail($property, $request->validated()));
-        return back()->with('success', 'Votre message a bien ete envoye.');
+        return back()->with('success', 'Votre message à bien été envoyé.');
     }
 }

@@ -24,13 +24,10 @@ class PropertyController extends Controller
     {
         $property = new Property();
         $property->fill([
-            'surface' => 40,
-            'rooms' => 3,
-            'bedrooms' => 1,
-            'floor' => 0,
+            'distance' => 10,
+            'duration' => 30,
+            'elevation_gain' => 300,
             'city' => 'Battice',
-            'postal_code' => 4651,
-            'sold' => false,
         ]);
         return view('admin.property.form', [
             'property' => $property,
@@ -45,7 +42,7 @@ class PropertyController extends Controller
     {
         $property = Property::create($request->validated());
         $property->options()->sync($request->validated('options'));
-        return to_route('admin.property.index')->with('success', 'Le bien a bien ete cree');
+        return to_route('admin.property.index')->with('success', 'La rando à bien été créée');
     }
 
     /**
@@ -66,7 +63,7 @@ class PropertyController extends Controller
     {
         $property->update($request->validated());
         $property->options()->sync($request->validated('options'));
-        return to_route('admin.property.index')->with('success', 'Le bien a bien ete mis a jour');
+        return to_route('admin.property.index')->with('success', 'La rando à bien été mis à jour');
     }
 
     /**
@@ -75,6 +72,6 @@ class PropertyController extends Controller
     public function destroy(Property $property)
     {
         $property->delete();
-        return to_route('admin.property.index')->with('success', 'Le bien a bien ete supprime');
+        return to_route('admin.property.index')->with('success', 'La rando à bien été supprimée');
     }
 }

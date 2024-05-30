@@ -24,15 +24,11 @@ class PropertyFormRequest extends FormRequest
         return [
             'title' => ['required', 'min:8'],
             'description' => ['required', 'min:8'],
-            'surface' => ['required', 'integer', 'min:10'],
-            'rooms' => ['required', 'integer', 'min:1'],
-            'bedrooms' => ['required', 'integer', 'min:0'],
-            'floor' => ['required', 'integer', 'min:0'],
-            'price' => ['required', 'integer', 'min:0'],
+            'distance' => ['required', 'integer', 'min:10'],
+            'duration' => ['required', 'integer', 'min:1'],
+            'elevation_gain' => ['required', 'integer', 'min:0'],
             'city' => ['required', 'min:3'],
-            'address' => ['required', 'min:8'],
-            'postal_code' => ['required', 'min:4'],
-            'sold' => ['required', 'boolean'],
+            'country' => ['required', 'min:3'],
             'options' => ['array', 'exists:options,id', 'required'],
         ];
     }

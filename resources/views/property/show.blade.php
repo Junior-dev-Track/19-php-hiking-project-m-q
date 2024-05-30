@@ -5,15 +5,49 @@
 @section('content')
 <div class="container mt-4">
   <h1>{{ $property->title }}</h1>
-  <h2>{{ $property->rooms }} pieces - {{ $property->surface }} m²</h2>
-  <div class="text-primary fw-bold" style="font-size: 4rem;">
-    {{ number_format($property->price, thousands_separator: ' ') }} €
-  </div>
+  <h2>{{ $property->duration }} min - {{ $property->distance }} km</h2>
 
   <hr>
 
   <div class="mt-4">
-    <h4>Interresse par ce bien?</h4>
+    <p>{!! nl2br($property->description) !!}</p>
+    <div class="row">
+      <div class="col-8">
+        <h2>Caractéristiques</h2>
+        <table class="table table-striped">
+          <tr>
+            <td>Distance</td>
+            <td>{{ $property->distance }} km</td>
+          </tr>
+          <tr>
+            <td>Durée</td>
+            <td>{{ $property->duration }} min</td>
+          </tr>
+          <tr>
+            <td>Dénivelé</td>
+            <td>{{ $property->elevation_gain }} m</td>
+          </tr>
+          <tr>
+            <td>Localisation</td>
+            <td>
+              {{ $property->city }} ({{ $property->country }})
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-4">
+        <h2>Specificités</h2>
+        <ul class="list-group">
+          @foreach($property->options as $option)
+            <li class="list-group-item">{{ $option->name }}</li>
+          @endforeach
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <h4>Envie de plus de renseignements sur cette rando?</h4>
 
     @include('shared.flash')
 
@@ -32,48 +66,6 @@
         <button class="btn btn-primary">Soumettre</button>
       </div>
     </form>
-  </div>
-
-  <div class="mt-4">
-    <p>{!! nl2br($property->description) !!}</p>
-    <div class="row">
-      <div class="col-8">
-        <h2>Caracteristiques</h2>
-        <table class="table table-striped">
-          <tr>
-            <td>Surface Habitable</td>
-            <td>{{ $property->surface }} m²</td>
-          </tr>
-          <tr>
-            <td>Pieces</td>
-            <td>{{ $property->rooms }}</td>
-          </tr>
-          <tr>
-            <td>Chambres</td>
-            <td>{{ $property->bedrooms }}</td>
-          </tr>
-          <tr>
-            <td>Etage</td>
-            <td>{{ $property->floor ?: 'Rez de chaussee' }}</td>
-          </tr>
-          <tr>
-            <td>Localisation</td>
-            <td>
-              {{ $property->address }} <br>
-              {{ $property->city }} ({{ $property->postal_code }})
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div class="col-4">
-        <h2>Specificites</h2>
-        <ul class="list-group">
-          @foreach($property->options as $option)
-            <li class="list-group-item">{{ $option->name }}</li>
-          @endforeach
-        </ul>
-      </div>
-    </div>
   </div>
 
   </div>

@@ -14,15 +14,11 @@ class Property extends Model
     protected $fillable = [
         'title',
         'description',
-        'surface',
-        'rooms',
-        'bedrooms',
-        'floor',
-        'price',
+        'distance',
+        'duration',
+        'elevation_gain',
         'city',
-        'address',
-        'postal_code',
-        'sold',
+        'country',
     ];
 
     public function options(): BelongsToMany

@@ -1,6 +1,6 @@
 @extends('admin.admin')
 
-@section('title', $property->exists ? 'Editer un bien' : 'Creer un bien')
+@section('title', $property->exists ? 'Editer une rando' : 'Creer une rando')
 
 @section('content')
 
@@ -14,23 +14,19 @@
 <div class="row">
   @include('shared.input', ['class' =>'col', 'label' => 'Titre', 'name' => 'title', 'value' => $property->title])
   <div class="col row">
-    @include('shared.input', ['class' =>'col', 'name' => 'surface', 'value' => $property->surface])
-    @include('shared.input', ['class' =>'col', 'name' => 'price', 'label' => 'Prix', 'value' => $property->price])
+    @include('shared.input', ['class' =>'col', 'name' => 'distance', 'value' => $property->distance])
   </div>
 </div>
 @include('shared.input', ['type' => 'textarea', 'name' => 'description', 'value' => $property->description])
 <div class="row">
-  @include('shared.input', ['class' =>'col', 'name' => 'rooms', 'label' => 'Pieces', 'value' => $property->rooms])
-  @include('shared.input', ['class' =>'col', 'name' => 'bedrooms', 'label' => 'Chambres', 'value' => $property->bedrooms])
-  @include('shared.input', ['class' =>'col', 'name' => 'floor', 'label' => 'Etage', 'value' => $property->floor])
+  @include('shared.input', ['class' =>'col', 'name' => 'duration', 'label' => 'Durée', 'value' => $property->duration])
+  @include('shared.input', ['class' =>'col', 'name' => 'elevation_gain', 'label' => 'Dénivelé', 'value' => $property->elevation_gain])
 </div>
 <div class="row">
-  @include('shared.input', ['class' =>'col', 'name' => 'address', 'label' => 'Adresse', 'value' => $property->address])
+  @include('shared.input', ['class' =>'col', 'name' => 'country', 'label' => 'Pays', 'value' => $property->country])
   @include('shared.input', ['class' =>'col', 'name' => 'city', 'label' => 'Ville', 'value' => $property->city])
-  @include('shared.input', ['class' =>'col', 'name' => 'postal_code', 'label' => 'Code postal', 'value' => $property->postal_code])
 </div>
 @include('shared.select', ['name' => 'options', 'label' => 'Options', 'value' => $property->options()->pluck('id'),'multiple' => true])
-@include('shared.checkbox', ['name' => 'sold', 'label' => 'Vendu', 'value' => $property->sold, 'options' => $options])
 
 <div>
   <button class="btn btn-primary">
