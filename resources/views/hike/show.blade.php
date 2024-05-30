@@ -6,6 +6,7 @@
 <div class="container mt-4">
   <h1>{{ $hike->title }}</h1>
   <h2>{{ $hike->duration }} min - {{ $hike->distance }} km</h2>
+  <img src="/img/hikes/{{ $hike->title }}.jpg" alt="{{ $hike->title }}">
 
   <hr>
 
