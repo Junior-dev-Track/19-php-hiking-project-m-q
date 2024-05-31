@@ -26,6 +26,7 @@ Route::post('/randos/{hike}/contact', [\App\Http\Controllers\HikeController::cla
     'hike' => $idRegex
 ]);
 
+
 Route::get('/login', [\App\Http\Controllers\AuthController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/login', [\App\Http\Controllers\AuthController::class, 'doLogin']);
 Route::delete('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])->middleware('auth')->name('logout');
@@ -33,4 +34,10 @@ Route::delete('/logout', [\App\Http\Controllers\AuthController::class, 'logout']
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::resource('hike', \App\Http\Controllers\Admin\HikeController::class)->except(['show']);
     Route::resource('option', \App\Http\Controllers\Admin\OptionController::class)->except(['show']);
+});
+
+
+
+Route::get('/about', function () {
+    return view('hike.about');
 });
