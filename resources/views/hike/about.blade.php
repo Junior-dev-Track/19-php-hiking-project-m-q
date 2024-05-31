@@ -8,7 +8,7 @@
 @section('content')
     <section>
         <div class="d-flex align-items-center justify-content-center" style="background-image: url('/img/about.jpg'); background-repeat: no-repeat; background-size: cover; height: 200px;">
-                <div class="text-center">
+                <div class="container">
                     <h2 class="text-secondary">Notre Engagement</h2>
                     <p class="text-secondary">Nous sommes animés par une passion débordante pour la nature et les aventures en plein air. Notre engagement profond est de vous faire découvrir les trésors cachés des sentiers de randonnée, de vous emmener au plus près de la nature sauvage, où chaque pas est une rencontre avec la beauté de notre planète.</p>
                 </div>
