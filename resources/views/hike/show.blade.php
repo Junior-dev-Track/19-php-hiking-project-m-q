@@ -55,11 +55,11 @@
     <form action="{{ route('hike.contact', $hike) }}" method="post" class="vstack gap-3" style="padding-bottom: 80px;">
       @csrf
       <div class="row">
-        @include('shared.input', ['class' =>'col', 'name' => 'firstname', 'label' => 'Prenom'])
+        @include('shared.input', ['class' =>'col', 'name' => 'firstname', 'label' => 'Prénom'])
         @include('shared.input', ['class' =>'col', 'name' => 'lastname', 'label' => 'Nom'])
       </div>
       <div class="row">
-        @include('shared.input', ['class' =>'col', 'name' => 'phone', 'label' => 'Telephone'])
+        @include('shared.input', ['class' =>'col', 'name' => 'phone', 'label' => 'Téléphone'])
         @include('shared.input', ['type' => 'email', 'class' =>'col', 'name' => 'email', 'label' => 'Email'])
       </div>
       @include('shared.input', ['type' => 'textarea', 'class' =>'col', 'name' => 'message', 'label' => 'Message'])
