@@ -5,7 +5,7 @@
     <div class="d-flex align-items-center" style="background-image: url('/img/backgroundhome.jpg'); background-repeat: no-repeat; background-size: cover; height: 200px;">
       <div class="container">
         <h1 class="text-center text-secondary">Bienvenue sur HikingSpirit</h1>
-        <p class="text-center text-secondary">Découvrez les plus beaux sentiers de randonnée avec HikingSpirit, votre guide ultime pour explorer la nature. Que vous soyez un randonneur débutant ou un aventurier chevronné, notre site vous offre des ressources complètes pour planifier vos escapades en plein air.</p>
+        <p class="text-center text-muted">Découvrez les plus beaux sentiers de randonnée avec HikingSpirit, votre guide ultime pour explorer la nature. Que vous soyez un randonneur débutant ou un aventurier chevronné, notre site vous offre des ressources complètes pour planifier vos escapades en plein air.</p>
       </div>
     </div>
 
