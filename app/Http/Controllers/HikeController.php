@@ -15,10 +15,10 @@ class HikeController extends Controller
     {
         $query = Hike::query()->orderBy('created_at', 'desc')->with('options');
         if ($distance = $request->validated('distance')) {
-            $query = $query->where('distance', '>=', $distance);
+            $query = $query->where('distance', '<=', $distance);
         }
         if ($duration = $request->validated('duration')) {
-            $query = $query->where('duration', '>=', $duration);
+            $query = $query->where('duration', '<=', $duration);
         }
         if ($title = $request->validated('title')) {
             $query = $query->where('title', 'like', "%{$title}%");
