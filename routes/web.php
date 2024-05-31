@@ -36,8 +36,6 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::resource('option', \App\Http\Controllers\Admin\OptionController::class)->except(['show']);
 });
 
-
-
 Route::get('/about', function () {
     return view('hike.about');
 });
