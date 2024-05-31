@@ -5,7 +5,7 @@
 @section('content')
 <div class="container mt-4">
   <h1>{{ $hike->title }}</h1>
-  <h2>{{ $hike->duration }} min - {{ $hike->distance }} km</h2>
+  <h2>{{ $hike->duration }} - {{ $hike->distance }} km</h2>
   <img src="/img/hikes/{{ $hike->title }}.jpg" style="max-width: 500px;"" class="img-fluid rounded mx-auto d-block" alt="{{ $hike->title }}">
 
   <hr>
@@ -22,7 +22,7 @@
           </tr>
           <tr>
             <td>Durée</td>
-            <td>{{ $hike->duration }} min</td>
+            <td>{{ $hike->duration }}</td>
           </tr>
           <tr>
             <td>Dénivelé</td>
