@@ -37,7 +37,7 @@
         </table>
       </div>
       <div class="col-4">
-        <h2>Specificités</h2>
+        <h2>Spécificités</h2>
         <ul class="list-group">
           @foreach($hike->options as $option)
             <li class="list-group-item">{{ $option->name }}</li>
