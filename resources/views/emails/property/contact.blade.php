@@ -1,11 +1,11 @@
 <x-mail::message>
 # Nouvelle demande de contact
 
-Une nouvelle demande de contact a été reçue pour la propriété <a href="{{ route('hike.show', ['slug' => $hike->getSlug(), 'hike' => $hike]) }}">{{ $hike->title }}</a>.
+Une nouvelle demande de contact a été reçue pour la rando <a href="{{ route('hike.show', ['slug' => $hike->getSlug(), 'hike' => $hike]) }}">{{ $hike->title }}</a>.
 
-- Prenom: {{ $data['firstname'] }}
+- Prénom: {{ $data['firstname'] }}
 - Nom: {{ $data['lastname'] }}
-- Telephone: {{ $data['phone'] }}
+- Téléphone: {{ $data['phone'] }}
 - Email: {{ $data['email'] }}
 
 **Message:** <br>
