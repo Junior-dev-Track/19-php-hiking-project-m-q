@@ -23,9 +23,9 @@
           <li class="nav-item">
             <a href="{{ route('hike.index') }}" @class(['nav-link', 'active' => str_contains($route, 'hike.')])>Randos</a>
           </li>
-          <li class="nav-item">
-            <a href="{{ route('about.index') }}" @class(['nav-link', 'active' => str_contains($route, 'about.')])>About</a>
-          </li>
+           {{-- <li class="nav-item">
+            <a href="{{ route('hike.about') }}" @class(['nav-link', 'active' => str_contains($route, 'hike.about')])>About</a>
+          </li> --}}
           <li class="nav-item">
             <a href="{{ route('admin.hike.index') }}" @class(['nav-link', 'active' => str_contains($route, 'admin.hike.')])>Admin</a>
           </li>
