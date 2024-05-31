@@ -46,4 +46,9 @@ class HikeController extends Controller
         Mail::send(new HikeContactMail($hike, $request->validated()));
         return back()->with('success', 'Votre message à bien été envoyé.');
     }
+
+    public function about()
+    {
+        return view('hike.about');
+    }
 }
